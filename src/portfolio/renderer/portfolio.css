@@ -1,0 +1,28 @@
+.f-root {
+  --f-line: color-mix(in srgb, var(--f-text) 14%, transparent);
+  --f-muted: color-mix(in srgb, var(--f-text) 65%, transparent);
+  min-height: 100%;
+  background: var(--f-bg);
+  color: var(--f-text);
+  font-family: var(--f-font);
+}
+.f-muted { color: var(--f-muted); }
+.f-card { border: 1px solid var(--f-line); border-radius: var(--f-radius-card); padding: 1.25rem; }
+.f-tag {
+  display: inline-block; padding: .15rem .65rem; font-size: .8rem;
+  border-radius: var(--f-radius); border: 1px solid var(--f-line);
+}
+.f-link { color: var(--f-primary); text-decoration: underline; text-underline-offset: 3px; }
+.f-btn {
+  display: inline-flex; align-items: center; padding: .6rem 1.2rem; font-weight: 500;
+  border-radius: var(--f-radius); border: 1.5px solid var(--f-primary); color: var(--f-primary);
+  transition: opacity .15s;
+}
+.f-btn:hover { opacity: .85; }
+[data-btn='solid'] .f-btn { background: var(--f-primary); color: var(--f-on-primary); }
+[data-btn='ghost'] .f-btn { border-color: transparent; background: color-mix(in srgb, var(--f-primary) 14%, transparent); }
+
+.f-block:empty { display: none; }
+.f-editable { cursor: text; }
+.f-editable:hover { outline: 1.5px dashed var(--f-primary); outline-offset: 3px; }
+.f-editing { outline: 2px solid var(--f-primary); outline-offset: 3px; cursor: text; }
